@@ -2,18 +2,17 @@
 #include<stdlib.h>
 int main()
 {
-    int n,i=1,fact=1;
+    int n,arr[100],k=0,t,i;
+    printf("Enter the size of the array\n");
     scanf("%d",&n);
-    if(n==0)
+    printf("Enter the Number that is to be divisible\n");
+    scanf("%d",&t);
+    printf("Enter the elements of array\n");
+    for(i=0;i<n;i++)
     {
-        printf("1");
-        exit(0);
+        scanf("%d",&arr[i]);
+        if(arr[i]%t==0)
+            k++;
     }
-    while(i<=n)
-    {
-        fact=fact*i;
-        i++;
-    }
-    printf("%d",fact);
-    return 0;
+    printf("%d numbers are divisible by %d",k,t);
 }
